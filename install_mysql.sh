@@ -1,4 +1,7 @@
 #!/bin/bash
+
+echo "Em caso de acesso negado no workbench, instale o gnome-keyring com sudo apt install gnome-keyring"
+
 sudo apt update -y
 
 sudo apt install mysql-server mysql-client -y
@@ -17,7 +20,7 @@ fi
 echo "Deseja alterar o método de autenticação padrão? (RECOMENDADO) [Y,n]"
 read resposta
 if [[ $resposta == "Y" || $resposta == "y" ]]; then
-   echo "Use ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'suanovasenha'; "
+   echo "Use ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'suanovasenha'; flush privileges;"
    echo "======================="
    sudo mysql
 else
