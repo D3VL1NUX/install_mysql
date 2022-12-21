@@ -1,1 +1,1 @@
-# Meu scrip para instalar o mysql no bodhi linux
+# Meu script para instalar o mysql no bodhi linux
